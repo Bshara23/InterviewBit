@@ -1,54 +1,59 @@
+# Auxiliary Space: O(n)
 
-def merge(Arr, start, mid, end) :
+# Algorithmic Paradigm: Divide and Conquer
 
-	# create a temp array
-	temp = [0] * (end - start + 1)
+# Sorting In Place: No in a typical implementation
 
-	# crawlers for both intervals and for temp
-	i, j, k = start, mid+1, 0
-
-	# traverse both lists and in each iteration add smaller of both elements in temp 
-	while(i <= mid and j <= end) :
-		if(Arr[i] <= Arr[j]) :
-			temp[k] = Arr[i]
-			k += 1; i += 1
-		else :
-			temp[k] = Arr[j]
-			k += 1; j += 1
-
-	# add elements left in the first interval 
-	while(i <= mid):
-		temp[k] = Arr[i]
-		k += 1; i += 1
-
-	# add elements left in the second interval 
-	while(j <= end):
-		temp[k] = Arr[j]
-		k += 1; j += 1
-
-	# copy temp to original interval
-	for i in range (start, end + 1):
-		Arr[i] = temp[i - start]
+# Stable: Yes
 
 
-# Arr is an array of integer type
-# start and end are the starting and ending index of current interval of Arr
+# Python program for implementation of MergeSort 
+def mergeSort(arr): 
 
-def mergeSort(Arr, start, end):
+    if len(arr) > 1: 
+        mid = len(arr) // 2 #Finding the mid of the array 
+        L = arr[:mid] # Dividing the array elements  
+        R = arr[mid:] # into 2 halves 
+  
+        mergeSort(L) # Sorting the first half 
+        mergeSort(R) # Sorting the second half 
+  
+        i = j = k = 0
+          
+        # Copy data to temp arrays L[] and R[] 
+        while i < len(L) and j < len(R): 
+            if L[i] < R[j]: 
+                arr[k] = L[i] 
+                i+=1
+            else: 
+                arr[k] = R[j] 
+                j+=1
+            k+=1
+          
+        # Checking if any element was left 
+        while i < len(L): 
+            arr[k] = L[i] 
+            i+=1
+            k+=1
+          
+        while j < len(R): 
+            arr[k] = R[j] 
+            j+=1
+            k+=1
 
-	if(start < end):
-		mid = (start + end) / 2
-		mergeSort(Arr, start, mid)
-		mergeSort(Arr, mid+1, end)
-		merge(Arr, start, mid, end)
 
+#if __name__ == "__main__":
+#	arr = [1, 2 ,3 ,5 ,6 ,2, 3, 4, 1, 2, 3, 4, 5]
+#	#mergeSort(arr, 0, len(arr) - 1)
 
-if __name__ == "__main__":
-	arr = 1, 2 ,3 ,5 ,6 ,2, 3, 4, 1, 2, 3, 4, 5
-	#mergeSort(arr, 0, len(arr) - 1)
-	print(*arr)
-	print(len(arr))
+#	#print(*arr)
+#	#print(len(arr))
 
-	# create a temp array
-	temp = [6] * (20)
-	print(*temp)
+#	# create a temp array
+#	#temp = [6] * (20)
+#	#print(*temp)
+#	X = arr[:]
+#	X[1] = 0
+
+#	print(X)
+#	print(arr)
