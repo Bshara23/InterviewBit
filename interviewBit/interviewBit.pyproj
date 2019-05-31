@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f8eccc1-82a5-46ed-96b0-fd75b299f28c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>usefulTricks.py</StartupFile>
+    <StartupFile>Problems\MaxSubArray.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MergeSort.py" />
+    <Compile Include="Problems\MaxSubArray.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="quickSort.py">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
     <Compile Include="usefulTricks.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Problems\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
