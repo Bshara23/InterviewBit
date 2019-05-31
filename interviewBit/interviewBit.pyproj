@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="interviewBit.py" />
+    <Compile Include="MergeSort.py" />
     <Compile Include="tuplesExamples.py">
       <SubType>Code</SubType>
     </Compile>
