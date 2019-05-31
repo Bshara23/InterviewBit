@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f8eccc1-82a5-46ed-96b0-fd75b299f28c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>tuplesExamples.py</StartupFile>
+    <StartupFile>InsertionSort.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="InsertionSort.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MergeSort.py" />
     <Compile Include="tuplesExamples.py">
       <SubType>Code</SubType>
