@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f8eccc1-82a5-46ed-96b0-fd75b299f28c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>InsertionSort.py</StartupFile>
+    <StartupFile>usefulTricks.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,7 +25,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="MergeSort.py" />
+    <Compile Include="quickSort.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="tuplesExamples.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="usefulTricks.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
