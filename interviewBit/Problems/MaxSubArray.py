@@ -2,6 +2,8 @@
 # return the largest subset, if two subset has the maximal sum then return
 # the one with the larger length (or the one with the larger number count)
 # @param A : list of integers
+
+# TODO: use dynamic allocation to make it fast
     # @return a list of integers
 def maxset(A):
     i = 0;
