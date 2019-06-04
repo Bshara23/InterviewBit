@@ -48,3 +48,6 @@ if __name__ == "__main__":
     # only 0 is false
     l = [1, True, 4, -4, 0, 1]
     print(all(l))
+
+    A = "abc"
+    A = A[::-1] # reverse string
