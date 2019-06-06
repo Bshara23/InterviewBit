@@ -1,4 +1,6 @@
 
+
+#O(n^2)
 def maxSeq(A):
 
     lenA = len(A)
@@ -14,6 +16,7 @@ def maxSeq(A):
 
     return M
 
+#O(n^2)
 def longestSubsequenceLength(A):
 
     if len(A) == 0:
@@ -29,6 +32,7 @@ def longestSubsequenceLength(A):
 
     return max_length
 
+# total O(n^2)
 
 A = [ 1, 2 ]
 
