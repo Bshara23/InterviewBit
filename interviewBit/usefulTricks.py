@@ -61,5 +61,14 @@ if __name__ == "__main__":
     for letter, cnt in counter.most_common(3):
         print(letter, " : ", cnt)
 
+    # hash table/ dic
+    D = {}
+    D[1] = 4
+    D[1] = 5
+    D[2] = 3
+    D[44] = -4
+    for k, v in D.items():
+       print(k, v)
+
 
 
