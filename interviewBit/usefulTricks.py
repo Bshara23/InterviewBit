@@ -50,4 +50,16 @@ if __name__ == "__main__":
     print(all(l))
 
     A = "abc"
-    A = A[::-1] # reverse string
+    A = A[::-1] # reverse string / array
+
+    from collections import Counter
+    z = ["a", "b", "b", "c", "cc", "abc", "cc", "cc"]
+    counter = Counter(z)
+    print("count = ", counter)
+    print("b = ", counter["b"])
+    # print top 3 most common
+    for letter, cnt in counter.most_common(3):
+        print(letter, " : ", cnt)
+
+
+

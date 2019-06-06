@@ -23,6 +23,7 @@ def longestSubsequenceLength(A):
         else:
             h1[i] = x
 
+        # if h1 is empty then set j to 0, otherwise do like above
         j = bisect_left(h2, -x, len(h1) - 1) if h1 else 0  # O(log(n))
         if j >= len(h2) or len(h2) < len(h1):
             h2.append(-x)
@@ -33,3 +34,5 @@ def longestSubsequenceLength(A):
 
 A = [1, 11, 2, 10, 4, 5, 2, 1]
 print(longestSubsequenceLength(A))
+
+
