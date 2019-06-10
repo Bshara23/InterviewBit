@@ -16,7 +16,6 @@ def matrixE(A):
     Matrix = [[0 for x in range(rng)] for y in range(rng)] 
     for i in range (rng):
         for j in range(rng):
-            
             # the radius in a matrix is defined by the max of two distances x-center and y-center
             Matrix[i][j] = max(abs(i - A + 1) + 1, abs(j - A + 1) + 1)
 

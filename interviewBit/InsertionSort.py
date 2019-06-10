@@ -20,7 +20,7 @@ def insertionSort(arr):
         j = i - 1 # compare with the next number from the left
         while j >=0 and key < arr[j] : # move left
             arr[j+1] = arr[j] # number is higher than me
-							  # then move it above me
+		# then move it above me
             j -= 1
 
         arr[j+1] = key 
