@@ -1,3 +1,5 @@
+import time
+
 
 def isInterleave(A, B, C):
 
@@ -14,8 +16,9 @@ def isInterleave(A, B, C):
             return True
 
         # if this value has been calculated before then return it
-        if (i, j) in mem:
-            return mem[(i, j)]
+        #if (i, j) in mem:
+        #    return mem[(i, j)]
+
 
         # check if we can take the right/left path then take it
         res = (i < len_a and A[i] == C[k] and rec(i+1, j, k+1)) or\
@@ -29,10 +32,14 @@ def isInterleave(A, B, C):
 
 
 
-A = "aabcc"
-B = "dbbca"
-C1 = "aadbbcbcac"
-C2 = "aadbbbaccc"
+A = "ABDAEGGSFESFEWRDAEGGWERFEFWEFESFSEGREHRDGHDRGRDGRDGDRFWF"
+B = "CDWQEWDWADWAFFWGEFEWFEWFWHTHTJYLKLOIYMNDFBDRGWEQWDXZCAWQ"
+C1 = "ABDAEGGSFESFEWRDAEGGWERFEFWEFESFSEGREHRDGHDRGRDGRDGCDDWQREWDWADWAFFFWGEFEWFEWFWHTHTWJYLKLOIYMNDFBDRGWEQWDXZFCAWQ"
+C2 = "ABDAEGGSFESFEWRDAEGGWERFEFWEFESASEGREHRDGHDRGRDGRDGCDDWQREWDWADWAFFFWGEFEWFEWFWHTHTWJYLKLOIYMNDFBDRGWEQWDXZFCAWQ"
+
+start_time = time.clock()
 
 print(isInterleave(A, B, C1))
 print(isInterleave(A, B, C2))
+
+print("--- %s seconds ---" % (time.clock() - start_time))
