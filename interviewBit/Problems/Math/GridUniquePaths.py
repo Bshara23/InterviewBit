@@ -1,4 +1,6 @@
 import math
+from pip._internal import main
+main(["install", "pip"])
 
 def binom(x, y):
 

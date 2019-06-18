@@ -1,6 +1,6 @@
 
 
-
+import math as mt
 def primesum(A):
 
     if A <= 1:
