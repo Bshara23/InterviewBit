@@ -4,7 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-
+# difficulty = medium
 def addTwoNumbers(l1, l2, c=0):
 
     # start with main calculations for smallest sub-problem
