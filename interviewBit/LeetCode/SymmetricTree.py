@@ -7,7 +7,6 @@ class TreeNode:
         self.left = None
         self.right = None
 
-
 def isSymmetric(root: TreeNode) -> bool:
     if not root:
         return True
